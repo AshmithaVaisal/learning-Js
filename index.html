@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Words Calculator</title>
+    <link rel="stylesheet" href="../words-calculator/main.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Words Calculator</h2>
+        <div class="innerContainer1">
+            <!-- <input type="text" id="input-box" placeholder="Enter a Value "> -->
+            <textarea name="textarea" id="input-box" placeholder="Enter your text"></textarea>
+            <button onclick="calculate()">Calculate Words</button>
+            <div id="result">0
+
+            </div>
+        </div>
+    </div>
+    <script>
+        function calculate(){
+            const text = document.getElementById("input-box").value
+            const result = document.querySelector("#result")
+            const wordsArray = text.trim().split(' ')
+            result.innerHTML = wordsArray.length +" "+"words"
+        }
+    </script>
+</body>
+</html>
